@@ -1,3 +1,12 @@
-nimcache/
-nimblecache/
-htmldocs/
+*.mkdocs
+*.pdf
+*.docx
+*.log
+!assets/*.docx
+.diagramscache
+.pandoccache
+__folianttmp__
+docker-compose.override.yml
+.idea
+
+

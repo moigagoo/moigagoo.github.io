@@ -1,0 +1,19 @@
+title: &title Constantine Molchanov CV
+slug: constantine-molchanov-cv
+
+chapters:
+  - index.md
+
+backend_config:
+  mkdocs:
+    mkdocs.yml:
+      theme:
+        name: material
+        font:
+          text: PT Sans
+  pandoc: 
+    params:
+      pdf_engine: xelatex
+    vars:
+      mainfont: PT Sans
+
