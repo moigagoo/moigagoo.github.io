@@ -11,14 +11,15 @@
 
 ## Контакты
 
--   Почта: [moigagoo@duck.com](mailto:moigagoo@duck.com)
+-   Почта: [constantine@constantine-molchanov.ru](mailto:constantine@constantine-molchanov.ru)
 -   Телеграм: [t.me/moigagoo](https://t.me/moigagoo)
--   Хедхантер [https://hh.ru/resume/71130c32ff00e508240039ed1f646e644f7339](https://hh.ru/resume/71130c32ff00e508240039ed1f646e644f7339)
+-   Хедхантер [hh.ru/resume/71130c32ff00e508240039ed1f646e644f7339](https://hh.ru/resume/71130c32ff00e508240039ed1f646e644f7339)
+-   LinkedIn: [linkedin.com/in/moigagoo/](https://linkedin.com/in/moigagoo/)
 
 
 ## Опыт
 
-### 2023. Кузбассразрезуголь. Руководитель отдела разработки. Ульяновск, Москва, Кемерово
+### 2023. Кузбассразрезуголь. Руководитель отдела разработки
 
 ![](img/kru.png)
 
@@ -49,7 +50,7 @@
 -   внедрил единый трекер задач.
 
 
-### 2019—2023. Doumo. Chief Product Officer, продукт-менеджер. США (удалёнка)
+### 2019—2023. Doumo. Chief Product Officer, продукт-менеджер
 
 ![](img/td.png)
 
@@ -74,7 +75,7 @@ Doumo — продуктовая компания из Нью-Йорка, раз
 -   провёл обучение по редактуре для сотрудников.
 
 
-### 2016—2019. Ростелеком ИТ. Проджект-менеджер, технический писатель. Ульяновск
+### 2016—2019. Ростелеком ИТ. Проджект-менеджер, технический писатель
 
 ![](img/rtkit.png)
 
