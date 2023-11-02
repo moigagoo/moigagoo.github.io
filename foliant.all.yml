@@ -1,8 +1,12 @@
-title: &title Constantine Molchanov CV
+title: Константин Молчанов, CPO
 slug: constantine-molchanov-cv
 
 chapters:
-  - index.md
+  - Резюме на русском: ru.md
+  - CV in English: en.md
+
+preprocessors:
+  - superlinks
 
 backend_config:
   mkdocs:

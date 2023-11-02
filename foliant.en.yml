@@ -1,0 +1,22 @@
+title: Constantine Molchanov, CPO
+slug: constantine-molchanov-cv
+
+chapters:
+  - en.md
+
+preprocessors:
+  - superlinks
+
+backend_config:
+  mkdocs:
+    mkdocs.yml:
+      theme:
+        name: material
+        font:
+          text: PT Sans
+  pandoc: 
+    params:
+      pdf_engine: xelatex
+    vars:
+      mainfont: PT Sans
+

@@ -2,3 +2,5 @@
 foliantcontrib.mkdocs
 mkdocs-material
 
+foliantcontrib.superlinks
+

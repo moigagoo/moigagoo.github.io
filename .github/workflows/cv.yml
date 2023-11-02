@@ -1,0 +1,28 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  Book-and-Docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Site
+        run: docker-compose run --rm foliant make site --config=foliant.all.yml
+
+      - name: PDF Russian
+        run: docker-compose run --rm foliant make pdf --config=foliant.ru.yml && mv constantine-molchanov-cv.pdf constantine-molchanov-cv.mkdocs/assets/CV_Константин_Молчанов.pdf
+
+      - name: PDF English
+        run: docker-compose run --rm foliant make pdf --config=foliant.en.yml && mv constantine-molchanov-cv.pdf constantine-molchanov-cv.mkdocs/assets/CV_Constantine_Molchanov.pdf
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./constantine-molchanov-cv.mkdocs
+
