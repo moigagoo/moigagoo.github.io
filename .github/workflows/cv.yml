@@ -23,9 +23,14 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: pdf
-          path: |
-            *.pdf
+          name: Russian PDF
+          path: constantine-molchanov-cv-ru.pdf
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: English PDF
+          path: constantine-molchanov-cv-en.pdf
 
       - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
