@@ -16,6 +16,11 @@ backend_config:
           text: PT Sans
         features:
           - navigation.tabs
+        icon:
+          logo: material/account-tie
+        palette:
+          primary: white
+          accent: pink
   pandoc: 
     params:
       pdf_engine: xelatex
