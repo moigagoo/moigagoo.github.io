@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Site
-        run: docker-compose run --rm foliant make site --config=foliant.all.yml && mkdir constantine-molchanov-cv.mkdocs/assets
+        run: docker-compose run --rm foliant make site --config=foliant.all.yml
 
       - name: PDF Russian
         run: docker-compose run --rm foliant make pdf --config=foliant.ru.yml && mv constantine-molchanov-cv.pdf constantine-molchanov-cv.mkdocs/assets/CV_Константин_Молчанов.pdf
