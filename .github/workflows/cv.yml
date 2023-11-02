@@ -15,12 +15,18 @@ jobs:
         run: docker-compose run --rm foliant make site --config=foliant.all.yml
 
       - name: PDF Russian
-        run: docker-compose run --rm foliant make pdf --config=foliant.ru.yml && mv constantine-molchanov-cv.pdf constantine-molchanov-cv.mkdocs/assets/CV_Константин_Молчанов.pdf
+        run: docker-compose run --rm foliant make pdf --config=foliant.ru.yml
 
       - name: PDF English
-        run: docker-compose run --rm foliant make pdf --config=foliant.en.yml && mv constantine-molchanov-cv.pdf constantine-molchanov-cv.mkdocs/assets/CV_Constantine_Molchanov.pdf
+        run: docker-compose run --rm foliant make pdf --config=foliant.en.yml
 
-      - name: Deploy
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: pdf
+          path: *.pdf
+
+      - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
