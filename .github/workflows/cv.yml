@@ -1,4 +1,4 @@
-name: Build and deploy site and PDF
+name: Build and deploy site and offline CV
 
 on:
   push:
@@ -11,25 +11,38 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Site
+      - name: Build site
         run: docker-compose run --rm foliant make site --config=foliant.all.yml
-
-      - name: PDF Russian
-        run: docker-compose run --rm foliant make pdf --config=foliant.ru.yml
-
-      - name: PDF English
-        run: docker-compose run --rm foliant make pdf --config=foliant.en.yml
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: constantine-molchanov-cv-pdf
-          path: |
-            *.pdf
 
       - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./constantine-molchanov-cv.mkdocs
+
+      - name: Offline Russian
+        run: |
+          docker-compose run --rm foliant make pdf --config=foliant.ru.yml
+          docker-compose run --rm foliant make docx --config=foliant.ru.yml
+
+      - name: Upload artifacts Russian
+        uses: actions/upload-artifact@v3
+        with:
+          name: constantine-molchanov-cv-ru
+          path: |
+            constantine-molchanov-cv-ru.pdf
+            constantine-molchanov-cv-ru.docx
+
+      - name: Offline English
+        run: |
+          docker-compose run --rm foliant make pdf --config=foliant.en.yml
+          docker-compose run --rm foliant make docx --config=foliant.en.yml
+
+      - name: Upload artifacts English
+        uses: actions/upload-artifact@v3
+        with:
+          name: constantine-molchanov-cv-en
+          path: |
+            constantine-molchanov-cv-en.pdf
+            constantine-molchanov-cv-en.docx
 
