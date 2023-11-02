@@ -1,4 +1,4 @@
-name: Deploy Docs
+name: Build and deploy site and PDF
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
       - develop
 
 jobs:
-  Book-and-Docs:
+  Site-and-PDF:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
       - name: Site
-        run: docker-compose run --rm foliant make site --config=foliant.all.yml
+        run: docker-compose run --rm foliant make site --config=foliant.all.yml && mkdir constantine-molchanov-cv.mkdocs/assets
 
       - name: PDF Russian
         run: docker-compose run --rm foliant make pdf --config=foliant.ru.yml && mv constantine-molchanov-cv.pdf constantine-molchanov-cv.mkdocs/assets/CV_Константин_Молчанов.pdf
