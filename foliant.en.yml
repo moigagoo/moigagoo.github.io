@@ -16,7 +16,7 @@ backend_config:
           text: PT Sans
         features:
           - navigation.tabs
-   pandoc: 
+  pandoc: 
     params:
       pdf_engine: xelatex
     vars:
