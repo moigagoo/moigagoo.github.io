@@ -15,6 +15,8 @@ backend_config:
         name: material
         font:
           text: PT Sans
+        features:
+          - navigation.tabs
   pandoc: 
     params:
       pdf_engine: xelatex
