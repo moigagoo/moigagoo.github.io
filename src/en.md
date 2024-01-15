@@ -1,6 +1,6 @@
 # Constantine Molchanov
 
-I have 12 years of experience in IT, including 7 years on manager roles. Started as a tech writer, have programming experience (Python). I specialize in B2B SaaS products, having managed a team of 10 product managers and 80 developers and launching new products to market as a CPO and product manager.
+I have 13 years of experience in IT, including 8 years on manager roles. Started as a tech writer, have programming experience (Python). I specialize in B2B SaaS products, having managed a team of 10 product managers and 80 developers and launching new products to market as a CPO and product manager.
 
 -   [+7 917 637-39-39](tel:+79176373930)
 -   [constantine@constantine-molchanov.ru](mailto:constantine@constantine-molchanov.ru)
